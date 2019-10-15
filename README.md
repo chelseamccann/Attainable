@@ -3,7 +3,7 @@ Attainable is an app that allows high school students to input their GPA to see 
 
 ## Technologies
 * Vanilla JavaScript
-* D3.js + HTML5 + SVG + CSS3
+* D3.js + HTML5 + CSS3
 * Webpack
 
 ## Wireframe
