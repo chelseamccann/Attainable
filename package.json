@@ -477,7 +477,7 @@
     "vary": "^1.1.2",
     "verror": "^1.10.0",
     "vm-browserify": "^1.1.0",
-    "webpack": "^4.41.1",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
