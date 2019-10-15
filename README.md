@@ -25,3 +25,6 @@ Attainable is an app that allows high school students to input their GPA to see 
 ### Day 3
 * Illuminate graphs that are found using filter
 * Generate list of filtered colleges to the left of map
+
+## Bonus Features
+* Add additional filter options for the results
