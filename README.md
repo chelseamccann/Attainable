@@ -6,6 +6,7 @@ With the Attainable application, users will be able to:
 * Input a students current GPA
 * View the potential colleges based on this number
 * Allow for secondary target GPA input to show updated results if GPA is attained by the time they apply
+
 In addition, this project will include:
 * A production README
 
