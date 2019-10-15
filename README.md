@@ -6,6 +6,7 @@ With the Attainable application, users will be able to:
 * Input a students current GPA
 * View the potential colleges based on this number
 * Allow for secondary target GPA input to show updated results if GPA is attained by the time they apply
+* Updated colleges will show with illuminated effect, clarifying the difference from the current GPA colleges
 
 In addition, this project will include:
 * A production README
@@ -37,6 +38,9 @@ In addition, this project will include:
 ### Day 3
 * Illuminate graphs that are found using filter
 * Generate list of filtered colleges to the left of map
+
+### Day 4
+* Touch up CSS effects of map illumination
 
 ## Bonus Features
 * Add additional filter options for the results
