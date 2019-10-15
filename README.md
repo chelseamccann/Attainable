@@ -1,4 +1,5 @@
 # Attainable
+Attainable is an app that allows high school students to input their GPA to see the results of colleges that they can currently apply to, as well as a target GPA which will update the map with the additional results showing how the target GPA would expand their selection.
 
 ## Technologies
 * Vanilla JavaScript
@@ -18,7 +19,8 @@
 
 ### Day 2
 * Use parsed json to place universities in proper locations on map
-* Generate filtering via GPA
+* Generate filtering via current GPA
+* Generate filtering via target GPA
 
 ### Day 3
 * Illuminate graphs that are found using filter
