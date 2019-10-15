@@ -1,5 +1,5 @@
 # Attainable
-Attainable is an app that allows high school students to input their GPA to see the results of colleges that they can currently apply to, as well as a target GPA which will update the map with the additional results showing how the target GPA would expand their selection.
+Attainable is an app that allows high school students to input their current GPA and view the potential colleges on a map that they can gain admission to. The student can also input a target GPA, which will update the map to show the additional colleges that they could reach for if they bring their GPA up to the target number. The results will show on both a map and in a list, whereas there will also be additional filters that can be applied on these results.
 
 ## MVP List
 * Map displaying colleges
