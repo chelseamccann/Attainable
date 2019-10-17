@@ -3,6 +3,12 @@ var coords = require('../data/coordinates.js')
 
 
 export var mapData = function(){
+
+    d3.select("body")
+    .append("h1")
+    .text( "Attainable")
+    
+
     cities = cities.default
     let schoolData = []
     d3.json("src/data/schoolInfo.json", function(schools){
@@ -28,9 +34,9 @@ export var mapData = function(){
 
     var path = d3.geoPath().projection(projection);
 
-    var radius = d3.scaleSqrt()
-    .domain([0, 1e1])
-    .range([0, 4]);
+    // var radius = d3.scaleSqrt()
+    // .domain([0, 1e1])
+    // .range([0, 4]);
 
     svg.append("g")
         .attr("fill-opacity", 0.4)
