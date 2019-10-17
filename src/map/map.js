@@ -33,7 +33,7 @@ export var mapData = function(){
     // .domain([0, 1e1])
     // .range([0, 4]);
 
-    svg.append("g")
+    svg.append("svg:g")
         .attr("fill-opacity", 0.4)
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features)
@@ -43,16 +43,25 @@ export var mapData = function(){
     svg.selectAll("circle")
         .data(schoolData)
         .enter()
-        .append("circle")
+        .append("svg:circle")
         .attr("transform", function(d) {
-            return "translate("+projection([d.longitude, d.latitude])+")";
+            return "translate("+projection([d.longitude, d.latitude])+")"
           })
         .attr("r", "3px")
         .attr("class", "college")
-        .append("title").text(function(d){
-            return d.schoolName
+        
+        
+        .on("mouseover", function(d){
+            d3.select(this.parentNode)
+            .append("text")
+            .attr("id", "school-name")
+            .attr("transform", function() { return "translate("+projection([d.longitude, d.latitude])+")" })
+            .text(function(){ return `${d.schoolName} - ${d.gpa}` })
         })
-        .attr("fill", "green")   
+
+        .on("mouseleave", function(d){
+            d3.select("#school-name").remove()
+        })
             
         })
     })

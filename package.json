@@ -84,6 +84,7 @@
     "currently-unhandled": "^0.4.1",
     "cyclist": "^1.0.1",
     "d3": "^5.12.0",
+    "d3-tip": "^0.9.1",
     "dashdash": "^1.14.1",
     "date-now": "^0.1.4",
     "debug": "^4.1.1",
