@@ -4,11 +4,6 @@ var coords = require('../data/coordinates.js')
 
 export var mapData = function(){
 
-    d3.select("body")
-    .append("h1")
-    .text( "Attainable")
-    
-
     cities = cities.default
     let schoolData = []
     d3.json("src/data/schoolInfo.json", function(schools){
@@ -21,7 +16,7 @@ export var mapData = function(){
     var width = 960,
         height = 600;
 		
-    var svg = d3.select("body")
+    var svg = d3.select("#zoom")
         .append("svg")
         .attr("width",width)
         .attr("height",height);

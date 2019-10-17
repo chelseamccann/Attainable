@@ -1,6 +1,7 @@
 
 export var searchColleges = function(){
 
+
     // adding text boxes 
     d3.select("body")
     .append("input")
