@@ -56,8 +56,14 @@ export var searchColleges = function(){
                     .text(d.schoolName)
                     .attr("class", "current")
                     .on("click", () => {
-                        d3.select(".modal-header").append("text").text(c.node()["__data__"].schoolName).attr("id", "modal-school")
-                        d3.select("#simple-modal").style("display", "block")
+
+                        d3.select(".modal-header")
+                        .append("text")
+                        .text(c.node()["__data__"].schoolName)
+                        .attr("id", "modal-school")
+
+                        d3.select("#simple-modal")
+                        .style("display", "block")
                     })
         }
     })
@@ -88,8 +94,14 @@ export var searchColleges = function(){
                     .text(d.schoolName)
                     .attr("class", "target")
                     .on("click", () => {
-                        d3.select(".modal-header").append("text").text(c.node()["__data__"].schoolName).attr("id", "modal-school")
-                        d3.select("#simple-modal").style("display", "block")
+
+                        d3.select(".modal-header")
+                        .append("text")
+                        .text(c.node()["__data__"].schoolName)
+                        .attr("id", "modal-school")
+
+                        d3.select("#simple-modal")
+                        .style("display", "block")
                     })
                 }
             })
