@@ -57,12 +57,18 @@ export var mapData = function(){
             .attr("id", "school-name")
             .attr("transform", function() { return "translate("+projection([d.longitude, d.latitude])+")" })
             .text(function(){ return `${d.schoolName} - ${d.gpa}` })
+            
         })
-
+        
+        
         .on("mouseleave", function(d){
             d3.select("#school-name").remove()
         })
-
+        
+        .on("click", (e) => {
+            d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school")
+            d3.select("#simple-modal").style("display", "block")
+        })
             
         })
     })
