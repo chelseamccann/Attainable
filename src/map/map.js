@@ -34,7 +34,8 @@ export var mapData = function(){
     // .range([0, 4]);
 
     svg.append("svg:g")
-        .attr("fill-opacity", 0.4)
+        .attr("fill-opacity", 1)
+        .style("fill", "#546683 ")
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features)
         .enter().append("path")
@@ -44,6 +45,7 @@ export var mapData = function(){
         .data(schoolData)
         .enter()
         .append("svg:circle")
+        .style("fill", "#f4f4f4")
         .attr("transform", function(d) {
             return "translate("+projection([d.longitude, d.latitude])+")"
           })
