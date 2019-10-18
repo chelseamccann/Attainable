@@ -11,6 +11,8 @@ export var searchColleges = function(){
 
     d3.select("#left")
     .append("div")
+    .attr("id", "searches-parent")
+    .append("div")
     .attr("id", "searches")
 
 
@@ -44,7 +46,6 @@ export var searchColleges = function(){
     .append("button")
     .attr("id", "searchTargetButton")
     .attr("class", "target-box")
-    .text("Search")
 
     // d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
     d3.select("#left").append("ul").attr("id", "school-list")
@@ -71,7 +72,6 @@ export var searchColleges = function(){
                     .text(d.schoolName)
                     .attr("class", "current")
                     .on("click", () => {
-                        debugger
                         d3.select(".modal-header")
                         .append("text")
                         .text(c.node()["__data__"].schoolName)
@@ -89,26 +89,32 @@ export var searchColleges = function(){
                         d3.select(".modal-body")
                         .append("p")
                         .text(`GPA: ${gpa}`)
+                        .attr("class", "modal-text")
 
                         d3.select(".modal-body")
                         .append("p")
                         .text(`Acceptance Rate: ${acceptanceRate}`)
+                        .attr("class", "modal-text")
 
                         d3.select(".modal-body")
                         .append("p")
                         .text(`Enrollment: ${enrollment}`)
+                        .attr("class", "modal-text")
 
                         d3.select(".modal-body")
                         .append("p")
                         .text(`Overall Rank: ${overallRank}`)
+                        .attr("class", "modal-text")
 
                         d3.select(".modal-body")
                         .append("p")
                         .text(`SAT: ${sat}`)
+                        .attr("class", "modal-text")
 
                         d3.select(".modal-body")
                         .append("p")
                         .text(`Tuition: ${tuition}`)
+                        .attr("class", "modal-text")
 
                         d3.select("#simple-modal")
                         .style("display", "block")

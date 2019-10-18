@@ -99,7 +99,6 @@ body > h1{
     overflow: auto;
     list-style: none;
     line-height: 4;
-    font-size: 20px;
 }
 
 #searches input {
@@ -110,18 +109,56 @@ body > h1{
 /********************/
 
 #searchCurrent, #searchTarget {
-    border-radius: 10px;
+    width: 30%;
     border: 1px solid #546683;
     cursor: pointer;
+    width: 100%;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #546683;
 }
 
 #searchCurrent:focus, #searchTarget:focus{
-    outline: 3px solid #546683;
-    border-radius: 0;
+   color: #546683;
 }
 
 .searches{
     width: 100%;
     position: relative;
     display: flex;
+}
+
+#searchCurrentButton, #searchTargetButton {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #546683;
+    background: #546683;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*
+width: 30%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+*/
+
+.searches-parent {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#fa-search{
+    z-index: 1;
 }
