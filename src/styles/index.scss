@@ -79,3 +79,17 @@ body {
     color: #fff;
     font-size: 10px;
 }
+
+
+/********************/
+
+#school-list {
+    max-height: 600px;
+    overflow: auto;
+    list-style: none;
+}
+
+#searches input {
+    padding: 6px;
+    line-height: 2;
+}

@@ -9,6 +9,7 @@ export var searchColleges = function(){
     .append("div")
     .attr("id", "searches")
 
+
     d3.select("#searches")
     .append("input")
     .attr("type", "text")
