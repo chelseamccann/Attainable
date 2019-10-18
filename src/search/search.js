@@ -21,11 +21,17 @@ export var searchColleges = function(){
     .attr("class", "current-box")
     .attr("placeholder", "Current GPA")
 
+    // d3.select("#searches")
+    // .append("i")
+    // .attr("class", "fa fa-search")
+
     d3.select("#searches")
     .append("button")
+    .attr("type", "submit")
     .attr("id", "searchCurrentButton")
     .attr("class", "current-box")
-    .text("Search")
+    .append("i")
+    .attr("class", "fa fa-search")
 
     d3.select("#searches")
     .append("input")
@@ -58,16 +64,51 @@ export var searchColleges = function(){
             return  d.gpa <= parseFloat(currentGPA) ? "maroon" : ""
         }).attr("",function(d){
             if (d.gpa <= parseFloat(currentGPA)){ 
-                var c = d3.select(this)
+
+                let c = d3.select(this)
+
                     list.append("li")
                     .text(d.schoolName)
                     .attr("class", "current")
                     .on("click", () => {
-
+                        debugger
                         d3.select(".modal-header")
                         .append("text")
                         .text(c.node()["__data__"].schoolName)
                         .attr("id", "modal-school")
+
+
+                        let gpa = c.node()["__data__"].gpa.toFixed(1)
+                        let acceptanceRate = c.node()["__data__"].acceptanceRate
+                        let enrollment = c.node()["__data__"].enrollment
+                        let overallRank = c.node()["__data__"].overallRank
+                        let sat = c.node()["__data__"].sat
+                        let tuition = c.node()["__data__"].tuition
+
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`GPA: ${gpa}`)
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Acceptance Rate: ${acceptanceRate}`)
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Enrollment: ${enrollment}`)
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Overall Rank: ${overallRank}`)
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`SAT: ${sat}`)
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Tuition: ${tuition}`)
 
                         d3.select("#simple-modal")
                         .style("display", "block")

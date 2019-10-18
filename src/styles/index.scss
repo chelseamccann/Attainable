@@ -70,7 +70,7 @@ body > h1{
 }
 
 .modal-header{
-    background: coral;
+    background: #546683;
     padding: 15px;
     color: #fff;
 }
@@ -81,10 +81,11 @@ body > h1{
 
 .modal-body{
     padding: 10px 20px;
+    color: #546683;
 }
 
 .modal-footer{
-    background: coral;
+    background: #546683;
     padding: 10px;
     color: #fff;
     font-size: 10px;
@@ -104,4 +105,21 @@ body > h1{
 #searches input {
     padding: 6px;
     line-height: 2;
+}
+
+/********************/
+
+#searchCurrent, #searchTarget {
+    border-radius: 10px;
+    border: 1px solid #546683;
+    cursor: pointer;
+}
+
+#searchCurrent:focus, #searchTarget:focus{
+    outline: 3px solid #546683;
+    border-radius: 0;
+}
+
+#searchCurrent:active, #searchTarget:active{
+    border-radius: 10px;
 }

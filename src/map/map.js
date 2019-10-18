@@ -9,7 +9,20 @@ export var mapData = function(){
     d3.json("src/data/schoolInfo.json", function(schools){
         schools.map(el => {
             let currentCity = cities.filter(function(cities){return cities.city === el.city})
-            el["hs-gpa-avg"] !== null && currentCity.length > 0 ? schoolData.push({"schoolName": el["displayName"], "gpa": el["hs-gpa-avg"], "state": el["state"], "city": el["city"], "longitude": currentCity[0]["longitude"], "latitude": currentCity[0]["latitude"]}) : ''
+            el["hs-gpa-avg"] !== null && currentCity.length > 0 ? schoolData.push({
+                "schoolName": el["displayName"], 
+                "gpa": el["hs-gpa-avg"], 
+                "state": el["state"], 
+                "city": el["city"], 
+                "acceptanceRate": el["acceptance-rate"],
+                "enrollment": el["enrollment"],
+                "isPublic": el["isPublic"],
+                "overallRank": el["overallRank"],
+                "photo": el["primaryPhotoThumb"],
+                "sat": el["sat-avg"],
+                "tuition": el["tuition"],
+                "longitude": currentCity[0]["longitude"], 
+                "latitude": currentCity[0]["latitude"]}) : ''
         })
 
 
@@ -35,7 +48,7 @@ export var mapData = function(){
 
     svg.append("svg:g")
         .attr("fill-opacity", 1)
-        .style("fill", "#546683 ")
+        .style("fill", "#546683")
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features)
         .enter().append("path")
@@ -72,8 +85,15 @@ export var mapData = function(){
         })
         
         .on("click", (e) => {
-            d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school")
             d3.select("#simple-modal").style("display", "block")
+            d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school")
+            d3.select(".modal-body").append("p").text(`GPA: ${e.gpa}`)
+            d3.select(".modal-body").append("p").text(`Acceptance Rate: ${e.acceptanceRate}`)
+            d3.select(".modal-body").append("p").text(`Enrollment ${e.enrollment}`)
+            d3.select(".modal-body").append("p").text(`Overall Rank: ${e.overallRank}`)
+            d3.select(".modal-body").append("p").text(`SAT: ${e.sat}`)
+            d3.select(".modal-body").append("p").text(`Tuition: ${e.tuition}`)
+            // d3.select(".modal-body").append("image").attr("href", e.photo)
         })
             
         })
