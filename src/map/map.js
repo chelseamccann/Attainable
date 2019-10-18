@@ -55,15 +55,20 @@ export var mapData = function(){
         .on("mouseover", function(d){
             d3.select(this.parentNode)
             .append("text")
+            .style("fill", "#f4f4f4")
             .attr("id", "school-name")
             .attr("transform", function() { return "translate("+projection([d.longitude, d.latitude])+")" })
-            .text(function(){ return `${d.schoolName} - ${d.gpa}` })
-            
+            .text(function(){ return `${d.schoolName}` })
+
+            d3.select("#layout").append("div").attr("id", "gpa").text(function(){
+                return (d.gpa).toFixed(1)
+            })
         })
         
         
         .on("mouseleave", function(d){
             d3.select("#school-name").remove()
+            d3.select("#gpa").remove()
         })
         
         .on("click", (e) => {

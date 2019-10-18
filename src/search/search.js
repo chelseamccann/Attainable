@@ -7,6 +7,10 @@ export var searchColleges = function(){
 
     d3.select("#layout")
     .append("div")
+    .attr("id", "left")
+
+    d3.select("#left")
+    .append("div")
     .attr("id", "searches")
 
 
@@ -36,11 +40,13 @@ export var searchColleges = function(){
     .attr("class", "target-box")
     .text("Search")
 
-    d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
+    // d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
+    d3.select("#left").append("ul").attr("id", "school-list")
+    
     // adding listener for current gpa input
     d3.select("#searchCurrentButton").on("click", function(){
         d3.selectAll(".current").remove()
-        // var list = d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
+
         var list = d3.select("#school-list")
         var currentGPA = d3.select("#searchCurrent").node().value;
         var circles = d3.selectAll("circle")
