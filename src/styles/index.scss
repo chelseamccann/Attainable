@@ -1,13 +1,23 @@
 
+body {
+    font-family: 'Rock Salt', cursive;
+    color: #f4f4f4;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 8;
+}
+
+body > h1{
+    font-size: 46px;
+    text-align: center;
+}
+
 #layout{
     display: flex;
 }
 
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
+#img {
+    z-index: -1;
 }
 
 .button {
@@ -87,6 +97,8 @@ body {
     max-height: 600px;
     overflow: auto;
     list-style: none;
+    line-height: 4;
+    font-size: 20px;
 }
 
 #searches input {
