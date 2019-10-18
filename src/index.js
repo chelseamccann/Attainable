@@ -5,8 +5,8 @@ import { zoom } from './zoom/zoom.js'
 import { modal } from './modal/modal';
 
 document.addEventListener("DOMContentLoaded", () => {
-    modal()
     zoom()
     mapData()
     searchColleges()
+    modal()
 })

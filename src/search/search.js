@@ -1,4 +1,5 @@
 
+
 export var searchColleges = function(){
 
 
@@ -43,16 +44,22 @@ export var searchColleges = function(){
         var circles = d3.selectAll("circle")
 
         circles.style("display", function(d){
-                return d.gpa <= parseFloat(currentGPA) ? "block" : "none"
-            }).attr("fill", function(d){
-                return  d.gpa <= parseFloat(currentGPA) ? "maroon" : ""
-            }).attr("",function(d){
-                if (d.gpa <= parseFloat(currentGPA)){ 
+
+            return d.gpa <= parseFloat(currentGPA) ? "block" : "none"
+        }).attr("fill", function(d){
+            return  d.gpa <= parseFloat(currentGPA) ? "maroon" : ""
+        }).attr("",function(d){
+            if (d.gpa <= parseFloat(currentGPA)){ 
+                var c = d3.select(this)
                     list.append("li")
                     .text(d.schoolName)
                     .attr("class", "current")
-                }
-            })
+                    .on("click", () => {
+                        d3.select(".modal-header").append("text").text(c.node()["__data__"].schoolName).attr("id", "modal-school")
+                        d3.select("#simple-modal").style("display", "block")
+                    })
+        }
+    })
 
     })
 
@@ -74,10 +81,15 @@ export var searchColleges = function(){
             })
             .attr("",function(d){
                 if (parseFloat(targetGPA) > parseFloat(currentGPA) && d.gpa <= parseFloat(targetGPA)){ 
+                    var c = d3.select(this)
                     d3.select("#school-list")
                     .append("li")
                     .text(d.schoolName)
                     .attr("class", "target")
+                    .on("click", () => {
+                        d3.select(".modal-header").append("text").text(c.node()["__data__"].schoolName).attr("id", "modal-school")
+                        d3.select("#simple-modal").style("display", "block")
+                    })
                 }
             })
     })
