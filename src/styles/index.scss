@@ -120,6 +120,8 @@ body > h1{
     border-radius: 0;
 }
 
-#searchCurrent:active, #searchTarget:active{
-    border-radius: 10px;
+.searches{
+    width: 100%;
+    position: relative;
+    display: flex;
 }
