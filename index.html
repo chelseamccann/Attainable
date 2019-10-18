@@ -6,10 +6,30 @@
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script src="./dist/main.js"></script>
     <link rel='stylesheet' href="./dist/main.css"/>
-    <title>Document</title>
+    <title>Attainable</title>
 </head>
 <body>
     <h1>Attainable</h1>
+
+    <button id="modal-btn" class="button">Click</button>
+    <div id="simple-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h1>Harvard</h1>
+            </div>
+
+            <div class="modal-body">
+                <p>Extracurricular</p>
+                <p>Other details of Harvard.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <h3>This college is attainable!</h3>
+            </div>
+        </div>
+    </div>
+
     <div id="layout"></div>
 </body>
 </html>

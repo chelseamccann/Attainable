@@ -62,6 +62,7 @@ export var mapData = function(){
         .on("mouseleave", function(d){
             d3.select("#school-name").remove()
         })
+
             
         })
     })

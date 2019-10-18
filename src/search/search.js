@@ -38,7 +38,7 @@ export var searchColleges = function(){
     // adding listener for current gpa input
     d3.select("#searchCurrentButton").on("click", function(){
         d3.selectAll(".current").remove()
-        var list = d3.select("#layout").append("ul").attr("id", "school-list")
+        var list = d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
         var currentGPA = d3.select("#searchCurrent").node().value;
         var circles = d3.selectAll("circle")
 
@@ -48,7 +48,6 @@ export var searchColleges = function(){
                 return  d.gpa <= parseFloat(currentGPA) ? "maroon" : ""
             }).attr("",function(d){
                 if (d.gpa <= parseFloat(currentGPA)){ 
-                    debugger
                     list.append("li")
                     .text(d.schoolName)
                     .attr("class", "current")
@@ -60,7 +59,7 @@ export var searchColleges = function(){
     // adding listener for target gpa input
     d3.select("#searchTargetButton").on("click", function(){
         d3.selectAll(".target").remove()
-        var list = d3.select("#layout").append("ul").attr("id", "school-list")
+        // var list = d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
         var currentGPA = d3.select("#searchCurrent").node().value;
         var targetGPA = d3.select("#searchTarget").node().value;
         var circles = d3.selectAll("circle")
@@ -75,8 +74,8 @@ export var searchColleges = function(){
             })
             .attr("",function(d){
                 if (parseFloat(targetGPA) > parseFloat(currentGPA) && d.gpa <= parseFloat(targetGPA)){ 
-                    debugger
-                    list.append("li")
+                    d3.select("#school-list")
+                    .append("li")
                     .text(d.schoolName)
                     .attr("class", "target")
                 }
