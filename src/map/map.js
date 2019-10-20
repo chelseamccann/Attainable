@@ -57,7 +57,7 @@ export var mapData = function(){
     svg.selectAll("circle")
         .data(schoolData)
         .enter()
-        .append("svg:circle")
+        .append("svg:circle").attr("fill", "orange")
         .attr("transform", function(d) {
             return "translate("+projection([d.longitude, d.latitude])+")"
           })
