@@ -101,13 +101,10 @@ body > h1{
     line-height: 4;
 }
 
-#searches input {
-    padding: 6px;
-    line-height: 2;
-}
+
 
 /********************/
-
+/*
 #searchCurrent, #searchTarget {
     width: 30%;
     border: 1px solid #546683;
@@ -143,13 +140,6 @@ body > h1{
     font-size: 20px;
 }
 
-/*
-width: 30%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-*/
 
 .searches-parent {
     width: 30%;
@@ -162,3 +152,62 @@ transform: translate(-50%, -50%);
 #fa-search{
     z-index: 1;
 }
+*/
+
+#container-one, #container-two {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  #container-two{
+    margin-top: 90px;
+  }
+
+  #container-one input#searchCurrent:focus, #container-two input#searchTarget:focus{
+    outline-color: #546683;
+  }
+
+  #container-one input#searchCurrent, 
+  #container-two input#searchTarget {
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  #container-one input#searchCurrent::-webkit-input-placeholder,
+  #container-two input#searchTarget::-webkit-input-placeholder {
+    color: #65737e;
+ }
+
+ #container-one input#searchCurrent:-ms-input-placeholder,
+ #container-two input#searchTarget:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+.icon1{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }
+
+  .icon2{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }

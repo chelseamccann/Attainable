@@ -63,7 +63,8 @@ export var mapData = function(){
           })
         .attr("r", "3px")
         .attr("class", "college")
-        
+        .attr("margin", "80px")
+        .attr("cursor", "pointer")
         
         .on("mouseover", function(d){
             d3.select(this.parentNode)

@@ -1,51 +1,28 @@
-
-
 export var searchColleges = function(){
 
+    d3.select("#layout").append("div").attr("id", "left")
+    let boxes = d3.select("#left")
+    boxes.append("div").attr("id", "container-one")
+    boxes.append("div").attr("id", "container-two")
 
-    // adding text boxes 
+    d3.select("#container-one").append("span").attr("class", "icon1 current-box").append("i").attr("class", "fa fa-search")
 
-    d3.select("#layout")
-    .append("div")
-    .attr("id", "left")
-
-    d3.select("#left")
-    .append("div")
-    .attr("id", "searches-parent")
-    .append("div")
-    .attr("id", "searches")
-
-
-    d3.select("#searches")
+    d3.select("#container-one")
     .append("input")
     .attr("type", "text")
     .attr("id", "searchCurrent")
     .attr("class", "current-box")
     .attr("placeholder", "Current GPA")
 
-    // d3.select("#searches")
-    // .append("i")
-    // .attr("class", "fa fa-search")
+    d3.select("#container-two").append("span").attr("class", "icon2 target-box").append("i").attr("class", "fa fa-search")
 
-    d3.select("#searches")
-    .append("button")
-    .attr("type", "submit")
-    .attr("id", "searchCurrentButton")
-    .attr("class", "current-box")
-    .append("i")
-    .attr("class", "fa fa-search")
-
-    d3.select("#searches")
+    d3.select("#container-two")
     .append("input")
     .attr("type", "text")
     .attr("id", "searchTarget")
     .attr("class", "target-box")
     .attr("placeholder", "Target GPA")
 
-    d3.select("#searches")
-    .append("button")
-    .attr("id", "searchTargetButton")
-    .attr("class", "target-box")
 
     // d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
     d3.select("#left").append("ul").attr("id", "school-list")
@@ -153,6 +130,47 @@ export var searchColleges = function(){
                         .append("text")
                         .text(c.node()["__data__"].schoolName)
                         .attr("id", "modal-school")
+
+                        d3.select("#simple-modal")
+                        .style("display", "block")
+
+                        let gpa = c.node()["__data__"].gpa.toFixed(1)
+                        let acceptanceRate = c.node()["__data__"].acceptanceRate
+                        let enrollment = c.node()["__data__"].enrollment
+                        let overallRank = c.node()["__data__"].overallRank
+                        let sat = c.node()["__data__"].sat
+                        let tuition = c.node()["__data__"].tuition
+
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`GPA: ${gpa}`)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Acceptance Rate: ${acceptanceRate}`)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Enrollment: ${enrollment}`)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Overall Rank: ${overallRank}`)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`SAT: ${sat}`)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body")
+                        .append("p")
+                        .text(`Tuition: ${tuition}`)
+                        .attr("class", "modal-text")
 
                         d3.select("#simple-modal")
                         .style("display", "block")
