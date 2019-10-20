@@ -132,8 +132,8 @@ body > h1{
 
   #container-one input#searchCurrent, 
   #container-two input#searchTarget {
-    width: 150px;
-    height: 50px;
+    width: 170px;
+    height: 40px;
     background: #2b303b;
     border: none;
     font-size: 10pt;
@@ -167,7 +167,7 @@ body > h1{
     position: absolute;
     /*top: 50%;*/
     margin-left: 17px;
-    margin-top: 17px;
+    margin-top: 14px;
     z-index: 1;
     color: #4f5b66;
   }
@@ -176,7 +176,7 @@ body > h1{
     position: absolute;
     /*top: 50%;*/
     margin-left: 17px;
-    margin-top: 17px;
+    margin-top: 14px;
     z-index: 1;
     color: #4f5b66;
   }
@@ -215,4 +215,9 @@ body > h1{
   .current, .target {
       font-size: 9px;
       overflow: hidden
+  }
+
+  nav {
+      display: flex;
+      justify-content: space-between;
   }
