@@ -74,7 +74,8 @@ export var mapData = function(){
             .attr("transform", function() { return "translate("+projection([d.longitude, d.latitude])+")" })
             .text(function(){ return `${d.schoolName}` })
 
-            d3.select("#layout").append("div").attr("id", "gpa").text(function(){
+            // d3.select("#layout").append("div").attr("id", "gpa").text(function(){
+            d3.select("body").append("div").attr("id", "gpa").text(function(){
                 return (d.gpa).toFixed(1)
             })
         })

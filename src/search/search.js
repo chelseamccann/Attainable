@@ -5,7 +5,8 @@ export var searchColleges = function(){
     boxes.append("div").attr("id", "container-one")
     boxes.append("div").attr("id", "container-two")
 
-    d3.select("#container-one").append("span").attr("class", "icon1 current-box").append("i").attr("class", "fa fa-search")
+    d3.select("#container-one").append("button").attr("type", "submit")
+    .attr("id", "searchCurrentButton").attr("class", "icon1 current-box").append("i").attr("class", "fa fa-search")
 
     d3.select("#container-one")
     .append("input")
@@ -14,7 +15,8 @@ export var searchColleges = function(){
     .attr("class", "current-box")
     .attr("placeholder", "Current GPA")
 
-    d3.select("#container-two").append("span").attr("class", "icon2 target-box").append("i").attr("class", "fa fa-search")
+    d3.select("#container-two").append("button").attr("type", "submit")
+    .attr("id", "searchTargetButton").attr("class", "icon2 target-box").append("i").attr("class", "fa fa-search")
 
     d3.select("#container-two")
     .append("input")
