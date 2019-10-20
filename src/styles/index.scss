@@ -102,58 +102,12 @@ body > h1{
     margin-top: 150px;
 }
 
-
+#school-name{
+    font-size: 8px;
+}
 
 /********************/
-/*
-#searchCurrent, #searchTarget {
-    width: 30%;
-    border: 1px solid #546683;
-    cursor: pointer;
-    width: 100%;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #546683;
-}
 
-#searchCurrent:focus, #searchTarget:focus{
-   color: #546683;
-}
-
-.searches{
-    width: 100%;
-    position: relative;
-    display: flex;
-}
-
-#searchCurrentButton, #searchTargetButton {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #546683;
-    background: #546683;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-
-.searches-parent {
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#fa-search{
-    z-index: 1;
-}
-*/
 
 #container-one, #container-two {
     width: 300px;
@@ -172,7 +126,7 @@ body > h1{
 
   #container-one input#searchCurrent, 
   #container-two input#searchTarget {
-    width: 300px;
+    width: 150px;
     height: 50px;
     background: #2b303b;
     border: none;
@@ -184,6 +138,14 @@ body > h1{
     -moz-border-radius: 5px;
     border-radius: 5px;
   }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 
   #container-one input#searchCurrent::-webkit-input-placeholder,
   #container-two input#searchTarget::-webkit-input-placeholder {

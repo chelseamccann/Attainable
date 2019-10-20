@@ -10,7 +10,7 @@ export var searchColleges = function(){
 
     d3.select("#container-one")
     .append("input")
-    .attr("type", "text")
+    .attr("type", "number")
     .attr("id", "searchCurrent")
     .attr("class", "current-box")
     .attr("placeholder", "Current GPA")
@@ -20,7 +20,7 @@ export var searchColleges = function(){
 
     d3.select("#container-two")
     .append("input")
-    .attr("type", "text")
+    .attr("type", "number")
     .attr("id", "searchTarget")
     .attr("class", "target-box")
     .attr("placeholder", "Target GPA")
