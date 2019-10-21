@@ -26,6 +26,7 @@ export var wordCloud = function(){
             .enter()
             .append("text")
             .style("font-size", d => { return d.acceptanceRate/5 + "px" })
+            // .attr("text-anchor", "middle")
             .style("fill", "blue")
             .attr("transform", (d, i)=> { 
                 return "translate(" + [d.x, d.y] + ")rotate(" + i + ")" 
@@ -36,12 +37,11 @@ export var wordCloud = function(){
         
         d3.layout.cloud().size([500, 500])
             .words(schoolData)
+            .padding(true) // 
             .rotate(0)
             .fontSize(22)
             .on("end", draw)
             .start()
-
-
 
     })
 }

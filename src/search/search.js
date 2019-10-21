@@ -30,8 +30,9 @@ export var searchColleges = function(){
     // d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
     
     // adding listener for current gpa input
-    d3.select("#searchCurrentButton").on("click", function(){
-        debugger
+    let inputCurrent = function(){
+        // event.preventDefault();
+        
         if (d3.select("#school-list-title").node() === null) { 
             d3.select("#layout").append("h1").attr("id", "school-list-title").text("Schools")
             d3.select("#school-list-title").append("ul").attr("id", "school-list")
@@ -113,11 +114,15 @@ export var searchColleges = function(){
                     })
         }
     })
-
-    })
+    
+}
+d3.select("#searchCurrentButton").on("click", inputCurrent, false)
+d3.select("#searchCurrent").on("keydown", inputCurrent, false)
 
     // adding listener for target gpa input
-    d3.select("#searchTargetButton").on("click", function(){
+    let inputTarget = function(){
+        // event.stopPropagation();
+        // debugger
         d3.selectAll(".target").remove()
         // var list = d3.select("#layout").insert("ul", "svg").attr("id", "school-list")
         var currentGPA = d3.select("#searchCurrent").node().value;
@@ -192,6 +197,9 @@ export var searchColleges = function(){
                     })
                 }
             })
-    })
+    }
+
+    d3.select("#searchTargetButton").on("click", inputTarget, false)
+    d3.select("#searchTarget").on("keydown", inputTarget, false)
 
 }
