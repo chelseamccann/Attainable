@@ -1,11 +1,11 @@
 var cities = require('../data/cities.js')
 var coords = require('../data/coordinates.js')
 
-
 export var mapData = function(){
 
+    const schoolData = []
     cities = cities.default
-    let schoolData = []
+    
     d3.json("src/data/schoolInfo.json", function(schools){
         schools.map(el => {
             let currentCity = cities.filter(function(cities){return cities.city === el.city})
@@ -24,7 +24,6 @@ export var mapData = function(){
                 "longitude": currentCity[0]["longitude"], 
                 "latitude": currentCity[0]["latitude"]}) : ''
         })
-
 
     var width = 960,
         height = 600;
@@ -100,4 +99,6 @@ export var mapData = function(){
             
         })
     })
+    
+    // module.exports = { schoolData };
 }

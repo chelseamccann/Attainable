@@ -1,3 +1,4 @@
+
 export var searchColleges = function(){
 
     d3.select("nav").append("div").attr("id", "left")
@@ -72,36 +73,40 @@ export var searchColleges = function(){
                         let sat = c.node()["__data__"].sat
                         let tuition = c.node()["__data__"].tuition
 
-
                         d3.select(".modal-body")
+                        .insert("div","svg")
+                        .attr("class", "modal-body-p")
+
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`GPA: ${gpa}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Acceptance Rate: ${acceptanceRate}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Enrollment: ${enrollment}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Overall Rank: ${overallRank}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`SAT: ${sat}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Tuition: ${tuition}`)
                         .attr("class", "modal-text")
+                        
 
                         d3.select("#simple-modal")
                         .style("display", "block")
