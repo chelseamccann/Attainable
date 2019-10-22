@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
   mapData()
   searchColleges()
   modal()
-  wordCloud()
+  // wordCloud()
 })

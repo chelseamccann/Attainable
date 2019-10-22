@@ -45,7 +45,7 @@ body > h1{
 
 .modal-content {
     background-color: #f4f4f4;
-    margin: 20% auto; /* moves modal down up */
+    margin: 10% auto; /* moves modal down up */
     width: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3), 0 7px 20px 0 rgba(0,0,0,1.6);
     animation-name: modalopen;
@@ -221,6 +221,9 @@ body > h1{
   
   .modal-body {
       display: flex;
+      letter-spacing: 0;
+      height: 50%;
+      justify-content: space-between;
   }
 
   #title {
@@ -232,4 +235,10 @@ body > h1{
 
   #gpa{
       color: orange;
+  }
+
+  .modal-body-p{
+    line-height: 5;
+    transform: rotate(-15deg);
+    padding-right: 4%;
   }

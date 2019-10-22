@@ -1,5 +1,6 @@
 var cities = require('../data/cities.js')
 var coords = require('../data/coordinates.js')
+import { wordCloud } from '../wordcloud/wordcloud';
 
 export var mapData = function(){
 
@@ -88,13 +89,14 @@ export var mapData = function(){
         
         .on("click", (e) => {
             d3.select("#simple-modal").style("display", "block")
+            wordCloud(e.schoolName, e.acceptanceRate)
             d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school").attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`GPA: `).attr("class", "modal-text").append("p").text(e.gpa)
-            d3.select(".modal-body").append("p").text(`Acceptance Rate: ${e.acceptanceRate}%`).attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`Enrollment ${e.enrollment}`).attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`Overall Rank: ${e.overallRank}`).attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`SAT: ${e.sat}`).attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`Tuition: ${e.tuition}`).attr("class", "modal-text")
+            d3.select(".modal-body").append("div").attr("class", "modal-body-p")
+            d3.select(".modal-body-p").append("p").text(`GPA: `).attr("class", "modal-text").append("p").text(e.gpa)
+            d3.select(".modal-body-p").append("p").text(`SAT: ${e.sat}`).attr("class", "modal-text")
+            d3.select(".modal-body-p").append("p").text(`Acceptance Rate: ${e.acceptanceRate} % `).attr("class", "modal-text")
+            d3.select(".modal-body-p").append("p").text(`Enrollment ${e.enrollment.toLocaleString('en')}`).attr("class", "modal-text")
+            d3.select(".modal-body-p").append("p").text(`Tuition: $${e.tuition.toLocaleString('en')}`).attr("class", "modal-text")
             // d3.select(".modal-body").append("image").attr("href", e.photo)
         })
             
@@ -103,3 +105,4 @@ export var mapData = function(){
     
     // module.exports = { schoolData };
 }
+// d3.select(".modal-body").append("div").attr("class", "modal-body-p")

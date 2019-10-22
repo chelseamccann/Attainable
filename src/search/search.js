@@ -1,3 +1,4 @@
+import { wordCloud } from '../wordcloud/wordcloud';
 
 export var searchColleges = function(){
 
@@ -59,13 +60,15 @@ export var searchColleges = function(){
 
                     list.append("li")
                     .text(d.schoolName)
-                    .attr("class", "current")
+                    .attr("class", `current ${d.schoolName.split(' ').join('').replace("&", "").replace("'", "")}`)
+                    .attr("id", () => {
+                        return d.acceptanceRate || 50
+                    })
                     .on("click", () => {
                         d3.select(".modal-header")
                         .append("text")
                         .text(c.node()["__data__"].schoolName)
                         .attr("id", "modal-school")
-
 
                         let gpa = c.node()["__data__"].gpa.toFixed(1)
                         let acceptanceRate = c.node()["__data__"].acceptanceRate
@@ -74,8 +77,12 @@ export var searchColleges = function(){
                         let sat = c.node()["__data__"].sat
                         let tuition = c.node()["__data__"].tuition
 
+                        // wordCloud(c.node()["__data__"].schoolName, acceptanceRate, d3.select("#school-list").node().innerText.replace("&", "").replace("'", ""))
+                        wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
+
                         d3.select(".modal-body")
-                        .insert("div","svg")
+                        // .insert("div","svg")
+                        .append("div")
                         .attr("class", "modal-body-p")
 
                         d3.select(".modal-body-p")
@@ -85,27 +92,27 @@ export var searchColleges = function(){
 
                         d3.select(".modal-body-p")
                         .append("p")
-                        .text(`Acceptance Rate: ${acceptanceRate}`)
-                        .attr("class", "modal-text")
-
-                        d3.select(".modal-body-p")
-                        .append("p")
-                        .text(`Enrollment: ${enrollment}`)
-                        .attr("class", "modal-text")
-
-                        d3.select(".modal-body-p")
-                        .append("p")
-                        .text(`Overall Rank: ${overallRank}`)
-                        .attr("class", "modal-text")
-
-                        d3.select(".modal-body-p")
-                        .append("p")
                         .text(`SAT: ${sat}`)
                         .attr("class", "modal-text")
 
                         d3.select(".modal-body-p")
                         .append("p")
-                        .text(`Tuition: ${tuition}`)
+                        .text(`Acceptance Rate: ${acceptanceRate} % `)
+                        .attr("class", "modal-text")
+
+                        d3.select(".modal-body-p")
+                        .append("p")
+                        .text(`Enrollment: ${enrollment.toLocaleString('en')}`)
+                        .attr("class", "modal-text")
+
+                        // d3.select(".modal-body-p")
+                        // .append("p")
+                        // .text(`Overall Rank: ${overallRank}`)
+                        // .attr("class", "modal-text")
+
+                        d3.select(".modal-body-p")
+                        .append("p")
+                        .text(`Tuition: $${tuition.toLocaleString('en')}`)
                         .attr("class", "modal-text")
                         
 

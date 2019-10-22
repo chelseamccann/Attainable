@@ -5,8 +5,9 @@ export var modal = function(){
 
     closeBtn.addEventListener("click", () => {
         d3.select("#modal-school").node().remove()
-        while(d3.select(".modal-text").node()){
-            d3.select(".modal-text").node().remove()
+        while(d3.select(".modal-body-p").node()){
+            d3.select(".modal-body-p").node().remove()
+            d3.select("#wordcloud").node().remove()
         }
         modal.style.display = "none";
     });
@@ -14,8 +15,9 @@ export var modal = function(){
     window.addEventListener("click", (e) => {
         if(e.target === modal){
             d3.select("#modal-school").node().remove()
-            while(d3.select(".modal-text").node()){
-                d3.select(".modal-text").node().remove()
+            while(d3.select(".modal-body-p").node()){
+                d3.select(".modal-body-p").node().remove()
+                d3.select("#wordcloud").node().remove()
             }
             modal.style.display = 'none';
         }
