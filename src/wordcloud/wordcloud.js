@@ -57,7 +57,7 @@ export var wordCloud = function(schoolName, acceptanceRate){
             .attr("width", w)
             .attr("height", h)
             .append("g")
-            .attr("transform", "translate(" + w/2.8 + "," + h/2.2 + ")")
+            .attr("transform", "translate(" + w/2 + "," + h/2 + ")")
             .selectAll("text")
             .data(schoolData)
             .enter()
@@ -77,7 +77,7 @@ export var wordCloud = function(schoolName, acceptanceRate){
                 if (d.acceptanceRate === null){
                     return "6px"
                 } else {
-                    return d.acceptanceRate/3 + "px"; 
+                    return d.acceptanceRate/2 + "px"; 
                 }
             })
             .text( d => { return d.schoolName })

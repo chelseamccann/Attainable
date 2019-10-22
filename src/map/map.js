@@ -91,7 +91,7 @@ export var mapData = function(){
             d3.select("#simple-modal").style("display", "block")
             wordCloud(e.schoolName, e.acceptanceRate)
             d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school").attr("class", "modal-text")
-            d3.select(".modal-body").append("img").attr("src", "src/data/dog.png").attr("height", 100).attr("width", 100)
+            // d3.select(".modal-body").append("img").attr("src", "src/data/dog.png").attr("height", 100).attr("width", 100)
 
             d3.select(".modal-body").append("div").attr("class", "modal-body-p")
             d3.select(".modal-body-p").append("p").text(`GPA: `).attr("class", "modal-text").append("p").text(e.gpa)
