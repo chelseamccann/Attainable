@@ -31,7 +31,7 @@ body > h1{
     background-color: blue;
 }
 
-.modal {
+.modal, .modal-onload {
     display: none;
     position: fixed;
     z-index: 1;
@@ -43,7 +43,7 @@ body > h1{
     background-color: rgba(0,0,0,0.5);
 }
 
-.modal-content {
+.modal-content, .modal-content-onload {
     background-color: #f4f4f4;
     margin: 10% auto; /* moves modal down up */
     width: 70%;
@@ -52,13 +52,14 @@ body > h1{
     animation-duration: .5s;
 }
 
-.close-btn {
+.close-btn, .close-btn-onload {
     color: #ccc;
     float: right;
     font-size: 30px;
 }
 
-.close-btn:hover, .close-btn:focus {
+.close-btn:hover, .close-btn:focus,
+.close-btn-onload:hover, .close-btn-onload:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -69,22 +70,23 @@ body > h1{
     to { opacity: 1 }
 }
 
-.modal-header{
+.modal-header, .modal-header-onload{
     background: #546683;
     padding: 15px;
     color: #fff;
 }
 
-.modal-header h2, .modal-footer h3{
+.modal-header h2, .modal-footer h3,
+.modal-header-onload h2, .modal-footer-onload h3{
     margin: 0;
 }
 
-.modal-body{
+.modal-body, .modal-body-onload{
     padding: 10px 20px;
     color: #546683;
 }
 
-.modal-footer{
+.modal-footer, .modal-footer-onload{
     background: #546683;
     padding: 10px;
     color: #fff;
