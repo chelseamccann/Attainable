@@ -52,6 +52,10 @@ body > h1{
     animation-duration: .5s;
 }
 
+.modal-content{
+    margin: 7% auto;
+}
+
 .close-btn, .close-btn-onload {
     color: #ccc;
     float: right;
@@ -72,7 +76,7 @@ body > h1{
 
 .modal-header, .modal-header-onload{
     background: #546683;
-    padding: 15px;
+    padding: 26px;
     color: #fff;
 }
 
@@ -83,7 +87,9 @@ body > h1{
 
 .modal-body, .modal-body-onload{
     padding: 10px 20px;
-    color: #546683;
+    letter-spacing: 0;
+    color: #2d3849;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .modal-footer, .modal-footer-onload{
@@ -92,6 +98,15 @@ body > h1{
     color: #fff;
     font-size: 10px;
 }
+
+.gpas{
+    font-weight: 900;
+}
+
+#welcome, #footers{
+    text-align: center;
+}
+
 
 
 /********************/
@@ -221,13 +236,7 @@ body > h1{
       justify-content: space-between;
       margin-bottom: 30px;
   }
-  
-  .modal-body {
-      display: flex;
-      letter-spacing: 0;
-      height: 50%;
-      justify-content: space-between;
-  }
+
 
   #title {
       display: flex;
@@ -244,17 +253,15 @@ body > h1{
     /*font-family: 'Gochi Hand', cursive;*/
     font-size: 20px;
     font-family: 'Shadows Into Light Two', cursive;
-    line-height: 3;
     transform: rotate(-15deg);
-    padding-right: 9%;
+
     padding-left: 9%;
   }
 
 .current, .target{
     font-family: 'Gochi Hand', cursive;
     font-size: 18px;
-    padding-right: 1%;
-    
+    padding-right: 1%;  
 }
 
 #school-list{
@@ -271,9 +278,8 @@ body > h1{
 
 
 #pp{
-    padding-left: 5%;
     display: flex;
-
+    padding-left: 14%;
 }
 
 #pp > img{
@@ -282,4 +288,22 @@ body > h1{
 
 #modal-school, #modal-footer{
     align-content: center;
+}
+
+#modal-school, .modal-footer {
+    padding-left: 26%;
+}
+
+#modal-school{
+    font-size: 18px;
+}
+  
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+    height: 50%;
+    position: relative;
+    right: 0px;
+    width: 95.4%;
 }

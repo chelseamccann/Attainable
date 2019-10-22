@@ -8,7 +8,8 @@ export var modal = function(){
         while(d3.select(".modal-body-p").node()){
             d3.select(".modal-body-p").node().remove()
             d3.select("#wordcloud").node().remove()
-            d3.select("#bob").node().remove()
+            // d3.select("#bob").node().remove()
+            d3.select("#pp").node().remove()
         }
         modal.style.display = "none";
     });
@@ -19,7 +20,8 @@ export var modal = function(){
             while(d3.select(".modal-body-p").node()){
                 d3.select(".modal-body-p").node().remove()
                 d3.select("#wordcloud").node().remove()
-                d3.select("#bob").node().remove()
+                // d3.select("#bob").node().remove()
+                d3.select("#pp").node().remove()
             }
             modal.style.display = 'none';
         }

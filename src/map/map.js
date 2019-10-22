@@ -75,7 +75,7 @@ export var mapData = function(){
             .text(function(){ return `${d.schoolName}` })
 
             // d3.select("#layout").append("div").attr("id", "gpa").text(function(){
-            d3.select("h1").append("div").attr("id", "gpa").text(function(){
+            d3.select("#title").append("div").attr("id", "gpa").text(function(){
                 return (`  @   ${d.gpa.toFixed(1)}`)
             })
             

@@ -42,24 +42,22 @@ export var wordCloud = function(schoolName, acceptanceRate){
             }):''
             i += 1
         }
-        debugger
+
         let color = d3.scaleLinear()
             .domain([0,1,2,3,4,5,6,10,15,20,100])
             .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
 
-        const w = 300,
-        h = 500
-debugger
+        const w = 400,
+        h = 350
+
         function draw(schoolData){
-            debugger
             d3.select(".modal-body")
-            // .append("svg")
             .insert("svg", "#dog")
             .attr("id", "wordcloud")
             .attr("width", w)
             .attr("height", h)
             .append("g")
-            .attr("transform", "translate(" + w/2.3 + "," + h/2.5 + ")")
+            .attr("transform", "translate(" + w/2.8 + "," + h/2.2 + ")")
             .selectAll("text")
             .data(schoolData)
             .enter()
@@ -67,26 +65,29 @@ debugger
             .attr("text-anchor", "middle")
             .attr("transform", (d, i) => { 
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")" })
-            .text( d => { 
-                debugger 
-                return d.schoolName
-            })
-            .style("fill", (d, i) => { 
+                .style("fill", (d, i) => { 
+                    if (d.current){
+                        return "#002664"
+                    } else {
+                        return color(i) 
+                    }
+                })
+            .style("font-size", function(d) { 
                 debugger
-                if (d.current){
-                    return "blue"
+                if (d.acceptanceRate === null){
+                    return "6px"
                 } else {
-                return color(i) 
+                    return d.acceptanceRate/3 + "px"; 
                 }
             })
-            .style("font-size", function(d) { return (d.acceptanceRate/25) + "vh"; })
+            .text( d => { return d.schoolName })
         }
         
 
         d3.layout.cloud()
             .size([w, h])
             .words(schoolData)
-            // .padding(true) // 
+            .padding(true) 
             .rotate(function() { return ~~(Math.random() * 2) * 90; })
             // .text(schoolData)
             .fontSize(d => { return d.acceptanceRate })

@@ -80,7 +80,7 @@ export var searchColleges = function(){
 
                         d3.select(".modal-body").append("div").attr("id", "pp")
 
-                        d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
+                        // d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
                         wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
                         
 
@@ -174,7 +174,7 @@ d3.select("#searchCurrent").on("keydown", inputCurrent, false)
 
                         d3.select(".modal-body").append("div").attr("id", "pp")
 
-                        d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
+                        // d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
                         wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
 
                         d3.select("#pp")
