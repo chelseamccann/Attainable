@@ -90,7 +90,7 @@ export var mapData = function(){
             d3.select("#simple-modal").style("display", "block")
             d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school").attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`GPA: `).attr("class", "modal-text").append("p").text(e.gpa)
-            d3.select(".modal-body").append("p").text(`Acceptance Rate: ${e.acceptanceRate}`).attr("class", "modal-text")
+            d3.select(".modal-body").append("p").text(`Acceptance Rate: ${e.acceptanceRate}%`).attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`Enrollment ${e.enrollment}`).attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`Overall Rank: ${e.overallRank}`).attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`SAT: ${e.sat}`).attr("class", "modal-text")

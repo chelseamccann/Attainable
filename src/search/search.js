@@ -169,7 +169,7 @@ d3.select("#searchCurrent").on("keydown", inputCurrent, false)
 
                         d3.select(".modal-body")
                         .append("p")
-                        .text(`Acceptance Rate: ${acceptanceRate}`)
+                        .text(`Acceptance Rate: ${acceptanceRate}%`)
                         .attr("class", "modal-text")
 
                         d3.select(".modal-body")
