@@ -35,7 +35,7 @@ export var searchColleges = function(){
         // event.preventDefault();
         
         if (d3.select("#school-list-title").node() === null) { 
-            d3.select("#layout").append("h1").attr("id", "school-list-title").text("Schools")
+            d3.select("#layout").append("h1").attr("id", "school-list-title").append("text").text("Schools")
             d3.select("#school-list-title").append("ul").attr("id", "school-list")
         } else {
             d3.select("#school-list-title").append("ul").attr("id", "school-list")
@@ -60,10 +60,10 @@ export var searchColleges = function(){
 
                     list.append("li")
                     .text(d.schoolName)
-                    .attr("class", `current ${d.schoolName.split(' ').join('').replace("&", "").replace("'", "")}`)
-                    .attr("id", () => {
-                        return d.acceptanceRate || 50
-                    })
+                    .attr("class", `current`)// ${d.schoolName.split(' ').join('').replace("&", "").replace("'", "")}`)
+                    // .attr("id", () => {
+                    //     return d.acceptanceRate || 50
+                    // })
                     .on("click", () => {
                         d3.select(".modal-header")
                         .append("text")
@@ -76,11 +76,15 @@ export var searchColleges = function(){
                         let overallRank = c.node()["__data__"].overallRank
                         let sat = c.node()["__data__"].sat
                         let tuition = c.node()["__data__"].tuition
-
                         // wordCloud(c.node()["__data__"].schoolName, acceptanceRate, d3.select("#school-list").node().innerText.replace("&", "").replace("'", ""))
-                        wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body").append("div").attr("id", "pp")
+
+                        d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
+                        wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
+                        
+
+                        d3.select("#pp")
                         // .insert("div","svg")
                         .append("div")
                         .attr("class", "modal-body-p")
@@ -168,33 +172,42 @@ d3.select("#searchCurrent").on("keydown", inputCurrent, false)
                         let sat = c.node()["__data__"].sat
                         let tuition = c.node()["__data__"].tuition
 
+                        d3.select(".modal-body").append("div").attr("id", "pp")
 
-                        d3.select(".modal-body")
+                        d3.select("#pp").append("img").attr("src", "src/data/bob.webp").attr("height", 100).attr("width", 100).attr("id", "bob")
+                        wordCloud(c.node()["__data__"].schoolName, acceptanceRate)
+
+                        d3.select("#pp")
+                        // .insert("div","svg")
+                        .append("div")
+                        .attr("class", "modal-body-p")
+
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`GPA: ${gpa}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Acceptance Rate: ${acceptanceRate}%`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Enrollment: ${enrollment}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
-                        .append("p")
-                        .text(`Overall Rank: ${overallRank}`)
-                        .attr("class", "modal-text")
+                        // d3.select(".modal-body-p")
+                        // .append("p")
+                        // .text(`Overall Rank: ${overallRank}`)
+                        // .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`SAT: ${sat}`)
                         .attr("class", "modal-text")
 
-                        d3.select(".modal-body")
+                        d3.select(".modal-body-p")
                         .append("p")
                         .text(`Tuition: ${tuition}`)
                         .attr("class", "modal-text")

@@ -103,7 +103,7 @@ body > h1{
     max-height: 450px;
     width: 400px;
     overflow: auto;
-    list-style: none;
+
     line-height: 4;
     /*margin-top: 150px;*/
 }
@@ -210,7 +210,8 @@ body > h1{
 
   .current, .target {
       font-size: 9px;
-      overflow: hidden
+      /*overflow: hidden;*/
+      list-style-type: circle;
   }
 
   nav {
@@ -238,7 +239,45 @@ body > h1{
   }
 
   .modal-body-p{
-    line-height: 5;
+    /*font-family: 'Gochi Hand', cursive;*/
+    font-size: 20px;
+    font-family: 'Shadows Into Light Two', cursive;
+    line-height: 3;
     transform: rotate(-15deg);
-    padding-right: 4%;
+    padding-right: 9%;
+    padding-left: 9%;
   }
+
+.current, .target{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 18px;
+    padding-right: 1%;
+    
+}
+
+#school-list{
+    padding-inline-start: 20px;
+    line-height: 1.9;
+    margin-top: 40px;
+}
+
+#school-list-title > text{
+    padding: 1%;
+    border: 1px solid white;
+    box-shadow: 0 5px 5px 0;
+}
+
+
+#pp{
+    padding-left: 5%;
+    display: flex;
+
+}
+
+#pp > img{
+    padding-top: 60%;
+}
+
+#modal-school, #modal-footer{
+    align-content: center;
+}

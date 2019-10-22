@@ -54,7 +54,7 @@ debugger
             debugger
             d3.select(".modal-body")
             // .append("svg")
-            .insert("svg", "div")
+            .insert("svg", "#dog")
             .attr("id", "wordcloud")
             .attr("width", w)
             .attr("height", h)
@@ -79,7 +79,7 @@ debugger
                 return color(i) 
                 }
             })
-            .style("font-size", function(d) { return (d.acceptanceRate/20) + "vh"; })
+            .style("font-size", function(d) { return (d.acceptanceRate/25) + "vh"; })
         }
         
 
