@@ -74,9 +74,10 @@ export var mapData = function(){
             .text(function(){ return `${d.schoolName}` })
 
             // d3.select("#layout").append("div").attr("id", "gpa").text(function(){
-            d3.select("body").append("div").attr("id", "gpa").text(function(){
-                return (d.gpa).toFixed(1)
+            d3.select("h1").append("div").attr("id", "gpa").text(function(){
+                return (`  @   ${d.gpa.toFixed(1)}`)
             })
+            
         })
         
         
@@ -88,7 +89,7 @@ export var mapData = function(){
         .on("click", (e) => {
             d3.select("#simple-modal").style("display", "block")
             d3.select(".modal-header").append("text").text(e.schoolName).attr("id", "modal-school").attr("class", "modal-text")
-            d3.select(".modal-body").append("p").text(`GPA: ${e.gpa}`).attr("class", "modal-text")
+            d3.select(".modal-body").append("p").text(`GPA: `).attr("class", "modal-text").append("p").text(e.gpa)
             d3.select(".modal-body").append("p").text(`Acceptance Rate: ${e.acceptanceRate}`).attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`Enrollment ${e.enrollment}`).attr("class", "modal-text")
             d3.select(".modal-body").append("p").text(`Overall Rank: ${e.overallRank}`).attr("class", "modal-text")

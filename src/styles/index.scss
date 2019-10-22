@@ -216,8 +216,20 @@ body > h1{
   nav {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 30px;
   }
   
   .modal-body {
       display: flex;
+  }
+
+  #title {
+      display: flex;
+      position: fixed;
+      text-align: center;
+      margin-left: 30%;
+  }
+
+  #gpa{
+      color: orange;
   }
