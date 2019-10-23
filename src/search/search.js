@@ -128,7 +128,15 @@ export var searchColleges = function(){
     
 }
 d3.select("#searchCurrentButton").on("click", inputCurrent, false)
-d3.select("#searchCurrent").on("keydown", inputCurrent, false)
+// d3.select("#searchCurrent").on("keydown", inputCurrent, false)
+d3.select("#searchCurrent").on("keydown", function(e){
+    debugger
+    if (event.keyCode === 13){
+        debugger
+        event.preventDefault()
+        inputCurrent()
+    }
+})
 
     // adding listener for target gpa input
     let inputTarget = function(){
@@ -220,6 +228,14 @@ d3.select("#searchCurrent").on("keydown", inputCurrent, false)
     }
 
     d3.select("#searchTargetButton").on("click", inputTarget, false)
-    d3.select("#searchTarget").on("keydown", inputTarget, false)
+    // d3.select("#searchTarget").on("keydown", inputTarget, false)
+    d3.select("#searchTarget").on("keydown", function(e){
+        debugger
+        if (event.keyCode === 13){
+            debugger
+            event.preventDefault()
+            inputTarget()
+        }
+    })
 
 }
