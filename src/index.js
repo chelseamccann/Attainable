@@ -7,6 +7,7 @@ import { wordCloud } from './wordcloud/wordcloud';
 import { instrux } from './instrux/instrux';
 
 document.addEventListener("DOMContentLoaded", () => {
+  d3.select("#simple-modal-onload").append("img").attr("src", "src/data/xtina.png").attr("id", "xtina")
   instrux()
   zoom()
   mapData()
