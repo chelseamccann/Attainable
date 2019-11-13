@@ -312,3 +312,31 @@ body > h1{
     margin-top: -12%;
     float: right;
 }
+
+.personal-buttons{
+    list-style: none;
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkedin{
+    width: 35px;
+}
+
+.github{
+    filter: invert(100%);
+}
+
+.angel{
+    width: 45px;
+}
+
+.ps{
+    color: gray;
+}
+
+#title{
+    margin-left: 40%;
+}
