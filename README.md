@@ -1,6 +1,8 @@
 # Attainable
 Attainable is an app that allows high school students to input their current GPA and view the potential colleges on a map that they can gain admission to. The student can also input a target GPA, which will update the map to show the additional colleges that they could reach for if they bring their GPA up to the target number. The results will show on both a map and in a list, whereas there will also be additional filters that can be applied on these results.
 
+<img width="944" alt="Attainable" src="https://user-images.githubusercontent.com/27509847/69818408-ad7df300-11ca-11ea-934f-e9428b01b5c4.png">
+
 ## Functionality & MVP
 With the Attainable application, users will be able to:
 * Input a students current GPA
@@ -21,8 +23,6 @@ In addition, this project will include:
 
 ## Wireframe
 <img width="944" alt="Wireframe" src="https://user-images.githubusercontent.com/27509847/66796821-d0806c00-eed6-11e9-8f03-905128ebed5c.png">
-https://github.com/chelseamccann/Attainable/issues/3#issue-529977501
-<img width="944" alt="Attainable" src="https://github.com/chelseamccann/Attainable/issues/3#issue-529977501">
 
 ## Implementation Timeline
 
