@@ -5,7 +5,7 @@ Attainable is an app that allows high school students to input their current GPA
 
 <img width="944" alt="Attainable" src="https://user-images.githubusercontent.com/27509847/69818408-ad7df300-11ca-11ea-934f-e9428b01b5c4.png">
 
-## Functionality & MVP Features:
+### Functionality & MVP Features:
 With the Attainable application, users will be able to:
 * Input a students current GPA
 * View the potential colleges based on this number
@@ -15,15 +15,15 @@ With the Attainable application, users will be able to:
 In addition, this project will include:
 * A production README
 
-## Technologies:
+### Technologies:
 * Vanilla JavaScript
 * D3.js + HTML5 + CSS3
 * Webpack
 
-## Data:
+### Data:
 * Parse json file which includes university with corresponding GPA, as well as additional information
 
-## Wireframe:
+### Wireframe:
 <img width="944" alt="Wireframe" src="https://user-images.githubusercontent.com/27509847/66796821-d0806c00-eed6-11e9-8f03-905128ebed5c.png">
 
 ## Implementation Timeline:
