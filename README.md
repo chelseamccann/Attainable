@@ -21,7 +21,8 @@ In addition, this project will include:
 
 ## Wireframe
 <img width="944" alt="Wireframe" src="https://user-images.githubusercontent.com/27509847/66796821-d0806c00-eed6-11e9-8f03-905128ebed5c.png">
-
+https://github.com/chelseamccann/Attainable/issues/3
+<img width="944" alt="Attainable" src="https://github.com/chelseamccann/Attainable/issues/3">
 
 ## Implementation Timeline
 
