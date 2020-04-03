@@ -238,7 +238,7 @@
     "json-stringify-safe": "^5.0.1",
     "json3": "^3.3.3",
     "jsprim": "^1.4.1",
-    "kind-of": "^6.0.2",
+    "kind-of": "^6.0.3",
     "lcid": "^1.0.0",
     "load-json-file": "^1.1.0",
     "locate-path": "^3.0.0",
