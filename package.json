@@ -242,7 +242,7 @@
     "lcid": "^1.0.0",
     "load-json-file": "^1.1.0",
     "locate-path": "^3.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "loose-envify": "^1.4.0",
     "loud-rejection": "^1.6.0",
     "make-dir": "^2.1.0",
