@@ -280,7 +280,7 @@
     "nice-try": "^1.0.5",
     "node-forge": "^0.9.0",
     "node-releases": "^1.1.35",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nopt": "^3.0.6",
     "normalize-package-data": "^2.5.0",
     "normalize-path": "^3.0.0",
