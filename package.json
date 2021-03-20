@@ -423,7 +423,7 @@
     "split-string": "^3.1.0",
     "sprintf-js": "^1.0.3",
     "sshpk": "^1.16.1",
-    "ssri": "^6.0.1",
+    "ssri": "^8.0.1",
     "static-extend": "^0.1.2",
     "statuses": "^1.5.0",
     "stream-browserify": "^2.0.2",
