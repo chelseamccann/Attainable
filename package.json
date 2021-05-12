@@ -334,7 +334,7 @@
     "pinkie-promise": "^2.0.1",
     "pkg-dir": "^3.0.0",
     "posix-character-classes": "^0.1.1",
-    "postcss": "^7.0.18",
+    "postcss": "^8.2.10",
     "postcss-loader": "^3.0.0",
     "postcss-selector-parser": "^6.0.2",
     "postcss-value-parser": "^4.0.2",
