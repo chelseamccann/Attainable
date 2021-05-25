@@ -35,7 +35,7 @@
     "browserify-rsa": "^4.0.1",
     "browserify-sign": "^4.0.4",
     "browserify-zlib": "^0.2.0",
-    "browserslist": "^4.7.0",
+    "browserslist": "^4.16.5",
     "buffer": "^4.9.1",
     "buffer-from": "^1.1.1",
     "buffer-indexof": "^1.1.1",
