@@ -448,7 +448,7 @@
     "to-regex-range": "^5.0.1",
     "toidentifier": "^1.0.0",
     "tough-cookie": "^2.4.3",
-    "trim-newlines": "^1.0.0",
+    "trim-newlines": "^3.0.1",
     "tslib": "^1.10.0",
     "tty-browserify": "^0.0.0",
     "tunnel-agent": "^0.6.0",
