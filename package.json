@@ -156,7 +156,7 @@
     "get-stdin": "^4.0.1",
     "get-value": "^2.0.6",
     "getpass": "^0.1.7",
-    "glob-parent": "^5.1.0",
+    "glob-parent": "^5.1.2",
     "globals": "^11.12.0",
     "graceful-fs": "^4.2.2",
     "handle-thing": "^2.0.0",
