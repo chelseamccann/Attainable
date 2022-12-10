@@ -349,7 +349,7 @@
     "psl": "^1.4.0",
     "public-encrypt": "^4.0.3",
     "punycode": "^2.1.1",
-    "qs": "^6.5.2",
+    "qs": "^6.5.3",
     "query-string": "^4.3.4",
     "querystring": "^0.2.0",
     "querystring-es3": "^0.2.1",
